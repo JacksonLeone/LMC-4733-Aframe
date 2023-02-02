@@ -6,64 +6,90 @@
 
 <body>
     <a-scene>
-        <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
-        <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> -->
-        <!-- Draw boxes back to front for transparency -->
+        <!-- Assets -->
+        <a-assets>
+            <img id="original" src="Original Painting.PNG">
+        </a-assets>
 
-        <!-- Note, shapes need to be rendered back to front to see behind them -->
-        <a-plane position="0 2 35" width="4" height="4"
-            material="side: double; color: #cb9fb0; transparent: true; opacity: 0.65"></a-plane>
-        <a-plane position="0 2 19" width="4" height="4"
-            material="side: double; color: #cb9fb0; transparent: true; opacity: 0.6"></a-plane>
-        <a-plane position="0 2 11" width="4" height="4"
-            material="side: double; color: #cb9fb0; transparent: true; opacity: 0.55"></a-plane>
-        <a-plane position="0 2 7" width="4" height="4"
-            material="side: double; color: #cb9fb0; transparent: true; opacity: 0.50"></a-plane>
-        <a-plane position="0 2 5" width="4" height="4"
-            material="side: double; color: #cb9fb0; transparent: true; opacity: 0.45"></a-plane>
-        <a-plane position="0 2 4" width="4" height="4"
-            material="side: double; color: #cb9fb0; transparent: true; opacity: 0.4"></a-plane>
+        <!-- Floor -->
+        <a-plane color="#cbd0ce" rotation="-90 0 0" height="9.4" width="9.2" position="0 0 .1"></a-plane>
+        <a-plane color="#c75b3f" rotation="-90 0 0" height="8.5" width="2" position="0 0.01 0"></a-plane>
 
-        <a-box position="6 2 35" width="4" height="4" depth="0.2"
-            material="side: double; color: #cb9fb0; transparent: true; opacity: 0.3"></a-box>
-        <a-box position="6 2 19" width="4" height="4" depth="0.2"
-            material="side: double; color: #6d2c59; transparent: true; opacity: 0.3"></a-box>
-        <a-box position="6 2 11" width="4" height="4" depth="0.2"
-            material="side: double; color: #833a66; transparent: true; opacity: 0.3"></a-box>
-        <a-box position="6 2 7" width="4" height="4" depth="0.2"
-            material="side: double; color: #a25a89; transparent: true; opacity: 0.3"></a-box>
-        <a-box position="6 2 5" width="4" height="4" depth="0.2"
-            material="side: double; color: #ba769d; transparent: true; opacity: 0.3"></a-box>
-        <a-box position="6 2 4" width="4" height="4" depth="0.2" roughness="0.3"
-            material="side: double; color: #d09da8; transparent: true; opacity: 0.3; vertexColors: vertex"></a-box>
+        <!-- Light source -->
+        <a-light type="ambient" color="#EEE" position="0 2 0"></a-light>
+
+        <!-- Room -->
+        <a-plane color="#e2c77a" width="3" height="6" position="-3 3 -4.6"></a-plane>
+        <a-plane color="#e2c77a" width="3" height="6" position="3 3 -4.6"></a-plane>
+        <a-plane color="#e2c77a" width="4" height="2" position="0 5 -4.6"></a-plane>
+        <a-plane color="#e2c77a" width="9.7" height="6" position="-4.5 3 0" rotation="0 90 0"></a-plane>
+        <a-plane color="#e2c77a" width="9.7" height="6" position="4.5 3 0" rotation="0 -90 0"></a-plane>
+        <a-plane color="#e2c77a" width="2.8" height="6" position="-3.1 3 4.8" rotation="0 180 0"></a-plane>
+        <a-plane color="#e2c77a" width="2.8" height="6" position="3.1 3 4.8" rotation="0 180 0"></a-plane>
+        <a-plane color="#e2c77a" width="4" height="2" position="0 5 4.8" rotation="0 180 0"></a-plane>
+
+        <!-- Image -->
+        <a-image src="#original" position="-4.45 3 0" rotation="0 90 0"></a-image>
+
+        <!-- Texts -->
+        <a-text value="Daniel Mullen" position="-2.05 5 -4.6" color="#000000" width="10"></a-text>
+        <a-text value="Pulse No.4, 2018" position="-2 4.5 -4.6" color="#000000"></a-text>
+        <a-text value="Daniel Mullen" position="2.05 5 4.6" color="#000000" width="10" rotation="0 180 0"></a-text>
+        <a-text value="Pulse No.4, 2018" position="2 4.5 4.6" color="#000000" rotation="0 180 0"></a-text>
+
+        <!-- Walthough painting demonstration  -->
+        <a-plane color="#DCD3D5" rotation="0 -90 0" position="1.5 2 -5" width="0.75" height="4"></a-plane>
+        <a-plane color="#DCD3D5" rotation="90 0 0" position="0 4 -5" width="3" height="0.75"></a-plane>
+        <a-plane color="#DCD3D5" rotation="0 90 0" position="-1.5 2 -5" width="0.75" height="4"></a-plane>
+        <a-plane color="#DCD3D5" rotation="-90 0 0" position="0 0 -5" width="3" height="0.75"></a-plane>
+
+        <a-plane color="#CAA2B1" rotation="0 -90 0" position="1.5 2 -5.95" width="1" height="4"></a-plane>
+        <a-plane color="#CAA2B1" rotation="90 0 0" position="0 4 -5.95" width="3" height="1"></a-plane>
+        <a-plane color="#CAA2B1" rotation="0 90 0" position="-1.5 2 -5.95" width="1" height="4"></a-plane>
+        <a-plane color="#CAA2B1" rotation="-90 0 0" position="0 0 -5.95" width="3" height="1"></a-plane>
+
+        <a-plane color="#BA7E9C" rotation="0 -90 0" position="1.5 2 -7.3" width="1.5" height="4"></a-plane>
+        <a-plane color="#BA7E9C" rotation="90 0 0" position="0 4 -7.3" width="3" height="1.5"></a-plane>
+        <a-plane color="#BA7E9C" rotation="0 90 0" position="-1.5 2 -7.3" width="1.5" height="4"></a-plane>
+        <a-plane color="#BA7E9C" rotation="-90 0 0" position="0 0 -7.3" width="3" height="1.5"></a-plane>
+
+        <a-plane color="#9C5E82" rotation="0 -90 0" position="1.5 2 -9.5" width="2.5" height="4"></a-plane>
+        <a-plane color="#9C5E82" rotation="90 0 0" position="0 4 -9.5" width="3" height="2.5"></a-plane>
+        <a-plane color="#9C5E82" rotation="0 90 0" position="-1.5 2 -9.5" width="2.5" height="4"></a-plane>
+        <a-plane color="#9C5E82" rotation="-90 0 0" position="0 0 -9.5" width="3" height="2.5"></a-plane>
+
+        <a-plane color="#7C4061" rotation="0 -90 0" position="1.5 2 -13.1" width="4" height="4"></a-plane>
+        <a-plane color="#7C4061" rotation="90 0 0" position="0 4 -13.1" width="3" height="4"></a-plane>
+        <a-plane color="#7C4061" rotation="0 90 0" position="-1.5 2 -13.1" width="4" height="4"></a-plane>
+        <a-plane color="#7C4061" rotation="-90 0 0" position="0 0 -13.1" width="3" height="4"></a-plane>
+
+        <a-plane color="#4D2447" rotation="0 -90 0" position="1.5 2 -18.5" width="6" height="4"></a-plane>
+        <a-plane color="#4D2447" rotation="90 0 0" position="0 4 -18.5" width="3" height="6"></a-plane>
+        <a-plane color="#4D2447" rotation="0 90 0" position="-1.5 2 -18.5" width="6" height="4"></a-plane>
+        <a-plane color="#4D2447" rotation="-90 0 0" position="0 0 -18.5" width="3" height="6"></a-plane>
+
+        <a-plane color="#27142F" rotation="0 -90 0" position="1.5 2 -26.25" width="8.5" height="4"></a-plane>
+        <a-plane color="#27142F" rotation="90 0 0" position="0 4 -26.25" width="3" height="8.5"></a-plane>
+        <a-plane color="#27142F" rotation="0 90 0" position="-1.5 2 -26.25" width="8.5" height="4"></a-plane>
+        <a-plane color="#27142F" rotation="-90 0 0" position="0 0 -26.25" width="3" height="8.5"></a-plane>
+
+        <a-plane color="#1C0B22" rotation="0 0 0" position="0 2 -31" width="3" height="4"></a-plane>
 
 
 
-        <a-box position="0 1.5 -4" rotation="0 0 0" color="#DCD3D5" width="3.5" height="4"></a-box>
-        <a-box position="0 1.5 -3.8" rotation="0 0 0" color="#CAA2B1" width="3" height="3.45"></a-box>
-        <a-box position="0 1.5 -3.6" rotation="0 0 0" color="#BA7E9C" width="2.5" height="3"></a-box>
-        <a-box position="0 1.5 -3.4" rotation="0 0 0" color="#9C5E82" width="2" height="2.5"></a-box>
-        <a-box position="0 1.5 -3.2" rotation="0 0 0" color="#7C4061" width="1.5" height="2.1"></a-box>
-        <a-box position="0 1.5 -3.1" rotation="0 0 0" color="#4D2447" width="1.3" height="1.8"></a-box>
-        <a-box position="0 1.5 -3" rotation="0 0 0" color="#411C3B" width="1.1" height="1.6"></a-box>
-        <a-box position="0 1.5 -2.9" rotation="0 0 0" color="#27142F" width="0.9" height="1.4"></a-box>
-        <a-box position="0 1.5 -2.8" rotation="0 0 0" color="#1C0B22" width="0.7" height="1.2"></a-box>
-        <!-- <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder
-        position="1 0.75 -3"
-        radius="0.5"
-        height="1.5"
-        color="#FFC65D"
-      ></a-cylinder>
-      <a-plane
-        position="0 0 -4"
-        rotation="-90 0 0"
-        width="4"
-        height="4"
-        color="#7BC8A4"
-      ></a-plane>
-      <a-sky color="#ECECEC"></a-sky> -->
+
+        <!-- 3D Painting Demonstration -->
+        <a-box position="0 2 5.2" rotation="0 0 0" color="#DCD3D5" width="3.5" height="4"></a-box>
+        <a-box position="0 2 5" rotation="0 0 0" color="#CAA2B1" width="3" height="3.45"></a-box>
+        <a-box position="0 2 4.8" rotation="0 0 0" color="#BA7E9C" width="2.5" height="3"></a-box>
+        <a-box position="0 2 4.6" rotation="0 0 0" color="#9C5E82" width="2" height="2.5"></a-box>
+        <a-box position="0 2 4.4" rotation="0 0 0" color="#7C4061" width="1.5" height="2.1"></a-box>
+        <a-box position="0 2 4.3" rotation="0 0 0" color="#4D2447" width="1.3" height="1.8"></a-box>
+        <a-box position="0 2 4.2" rotation="0 0 0" color="#411C3B" width="1.1" height="1.6"></a-box>
+        <a-box position="0 2 4.1" rotation="0 0 0" color="#27142F" width="0.9" height="1.4"></a-box>
+        <a-box position="0 2 4" rotation="0 0 0" color="#1C0B22" width="0.7" height="1.2"></a-box>
+
+        <!-- <a-sky color="#ECECEC"></a-sky> -->
     </a-scene>
 </body>
 
